@@ -1,0 +1,12 @@
+adm
+dladm
+netadm
+netcfg
+dhcpserv
+ikeuser
+lp
+root
+nobody
+noaccess
+nobody4
+pkg5srv
