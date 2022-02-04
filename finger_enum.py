@@ -29,20 +29,20 @@ def main():
         
         stdoutStr = str(stdout)
 
-        if("???" not in stdoutStr and stderr == None):
-            print(f'finger of \'finger {user}@{args.host}\' returned some users')
-            lines = stdoutStr.split("\\n")
-            for line in lines:
-                words = line.split(" ")
-                if not words[0].startswith('b\'Login') and words[0] != "'":
-                    print(f'{words[0]}')
+        lines = stdoutStr.split("\\n")
+        for i in range (1,len(lines)):
+            words = lines[i].split(" ")
+            for word in words:
+                if word != user and word != "???" and word.strip() != "" and word != "'": #then we've found a valid user          
                     if words[0] not in found_usernames:
                         found_usernames.append(words[0])
+                        print(f'finger of \'finger {user}@{args.host}\' returned some users')
+                        print(f'{words[0]}')
                         if args.outfile != "":
                             with open(args.outfile,'a') as f:
                                 f.write(words[0])
                                 f.write("\n")
-                                f.close()       
+                                f.close()      
 
 if __name__ == "__main__":
     main()

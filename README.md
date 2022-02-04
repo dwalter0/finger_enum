@@ -17,3 +17,5 @@ optional arguments:
 ```
 
 This is quite slow. It is faster to use the scanner/finger/finger_users module in msfconsole.
+
+There are some false positives especially with double worded names or words with apostrophes but it should find the valid ones.
