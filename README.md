@@ -15,3 +15,5 @@ optional arguments:
   -O OUTFILE, --outfile OUTFILE
                         List of usernames go out to this file in a wordlist like format. Since it's a slow bruteforce, successes are written to file as it goes.
 ```
+
+This is quite slow. It is faster to use the scanner/finger/finger_users module in msfconsole.
